@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.fi.loanapp.controllerTest.AdminControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 5.398 s <<< FAILURE! - in com.fi.loanapp.controllerTest.AdminControllerTest
+testValidateAdmin_InvalidCredentials  Time elapsed: 0.09 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateProcessingException: Error during execution of processor 'org.thymeleaf.spring5.processor.SpringInputGeneralFieldTagProcessor' (template: "/AdminLogin" - line 56, col 54)
+	at com.fi.loanapp.controllerTest.AdminControllerTest.testValidateAdmin_InvalidCredentials(AdminControllerTest.java:68)
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Error during execution of processor 'org.thymeleaf.spring5.processor.SpringInputGeneralFieldTagProcessor' (template: "/AdminLogin" - line 56, col 54)
+	at com.fi.loanapp.controllerTest.AdminControllerTest.testValidateAdmin_InvalidCredentials(AdminControllerTest.java:68)
+Caused by: java.lang.IllegalStateException: Neither BindingResult nor plain target object for bean name 'loginData' available as request attribute
+	at com.fi.loanapp.controllerTest.AdminControllerTest.testValidateAdmin_InvalidCredentials(AdminControllerTest.java:68)
+
+testValidateAdmin_ValidCredentials  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: Range for response status value 200 expected:<REDIRECTION> but was:<SUCCESSFUL>
+	at com.fi.loanapp.controllerTest.AdminControllerTest.testValidateAdmin_ValidCredentials(AdminControllerTest.java:55)
+
